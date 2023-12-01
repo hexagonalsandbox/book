@@ -74,7 +74,7 @@ TeleCommunication:
 
 
 
-## MESSAGE
+## Roles and behaviors
 
 
 
@@ -96,7 +96,7 @@ TeleCommunication:       # goal
 ```
 
 
-#### 2. Catalog of Components
+#### 2. Catalog of behaviors
 
 
 ```yml
@@ -127,9 +127,8 @@ Read Message:         # object interface
 ```
 
 
-#### 5. Network of Components
+#### 3. Network of Roles
 
-Roles:
 ```yml
 TeleCommunication:
   Provider:
@@ -139,21 +138,64 @@ TeleCommunication:
       Reader
 ```
 
-Actions:
+
+
+#### 4. Network of behaviors
+
 ```yml
 Exchange Message:  
   Send Message:
-    Ceate Message
+    Create Message
   Receive Message:
     Read Message
 ```
 
+## OBJECTS
 
 ```yml
-TeleCommunication:
-  FROM: Sender
-  TO: Receive
+Message:  
+    ACTION:
+      - create
+      - read
+      - delete
+      - update
+
+Provider:  
+    ACTION:
+      - create
+      - read
+      - delete
+      - update    
+
+Recipient:  
+    ACTION:
+      - create
+      - read
+      - delete
+      - update
+
+Provider:  
+    ACTION:
+      - create
+      - read
+      - delete
+      - update
+  
 ```
+
+## ROLES
+
+```yml
+Communicants:
+  - Sender
+  - Receiver
+
+Correspondent:
+  - Creator
+  - Reader
+
+```
+
 
 
 
@@ -162,7 +204,6 @@ polega na wymianie komunikatów pomiędzy nadawacą i odbiorcą
 
 
 ## Implementacja
-
 
 
 
