@@ -12,16 +12,16 @@ idea
 ```yml
 -
   DO: TeleCommunication
-    THROUGH: Exchange
-    THE: Message
-    FROM: Sender
-    TO: Recipient
+  THROUGH: Exchange
+  THE: Message
+  FROM: Sender
+  TO: Recipient
 ```
 
 
 ```yml
 -
-  Goal: TeleCommunication:
+  GOAL: TeleCommunication
   OPERATION: Exchange
   DATA: Message  
   FROM: Sender
