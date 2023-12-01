@@ -29,7 +29,7 @@ TeleCommunication:   # object, or verb + object
 ```
 
 
-#### 3. More Components
+#### 3. Complex Sentence
 
 
 ```yml
@@ -65,10 +65,12 @@ Recipient:             # object interface
 
 
 
+
+
 polega na wymianie komunikatów pomiędzy nadawacą i odbiorcą
 
 
-Implementacja
+## Implementacja
 
 
 
