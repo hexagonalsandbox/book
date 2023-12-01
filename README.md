@@ -150,38 +150,6 @@ Exchange Message:
     Read Message
 ```
 
-## OBJECTS
-
-```yml
-Message:  
-    ACTION:
-      - create
-      - read
-      - delete
-      - update
-
-Provider:  
-    ACTION:
-      - create
-      - read
-      - delete
-      - update    
-
-Recipient:  
-    ACTION:
-      - create
-      - read
-      - delete
-      - update
-
-Provider:  
-    ACTION:
-      - create
-      - read
-      - delete
-      - update
-  
-```
 
 ## ROLES
 
@@ -195,6 +163,39 @@ Correspondent:
   - Reader
 
 ```
+
+## OBJECTS
+
+```yml
+Message:  
+    ACTION:
+      - create
+      - read
+      - delete
+      - update
+
+Provider:  
+    ACTION:
+      - online
+      - offline      
+
+Correspondent:
+    OBJECT: Content
+    ACTION:
+      - create
+      - read
+      - delete
+      - update
+    
+
+Communicants:
+    OBJECT: Message
+    ACTION:
+      - send
+      - receive  
+  
+```
+
 
 
 
