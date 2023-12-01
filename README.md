@@ -109,24 +109,24 @@ Network:
 
 
 ```yml
-TeleCommunication:       # goal
-  THROUGH: Exchange      # verb/object
-  THE: Message           # object
+TeleCommunication:           # goal
+  THROUGH: Exchange          # verb/object
+  THE: Message               # object
   FROM:
-      Sender:            # object interface
-        THROUGH: Send    # verb/object
-        THE: Message     # object
+      Sender:                # object interface
+        WHICH: Sends         # verb/object
+        THE: Message         # object
         FROM:
-          Sender:            # object interface
-            THROUGH: Create    # verb/object
+          Creator:           # object interface
+            WHICH: Creates   # verb/object
             THE: Content     # object
   TO:             
-      Recipient:         # object interface
-        THROUGH: Receive # verb/object
-        THE: Message     # object
+      Recipient:             # object interface
+        WHICH: Receives      # verb/object
+        THE: Message         # object
         TO:
           Reader:            # object interface
-            THROUGH: Read    # verb/object
+            WHICH: Reads     # verb/object
             THE: Content     # object
 ```
 
