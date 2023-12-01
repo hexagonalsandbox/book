@@ -1,9 +1,32 @@
 # ebook
 hexagonal sandbox, how modular architecture works in real life with examples
 
+## Spis treści
+
+### Telekomunikacja
+
+
+```yml
+Telekomunikacja:
+  IN: Nadawca
+  OUT: Odbiorca
+  OPERATION:
+  DATA:
+```
+
+
+polega na wymianie komunikatów pomiędzy nadawacą i odbiorcą
+
+
+
+
+### tematy
+
 + "Use camera for facial recognition to unlock screen."
 + "Use camera to take a photo and send it to the recipient"
 + "From the contact list select the recipient and share"
+
+
 
 
 1. Oczekiania (klienta)
