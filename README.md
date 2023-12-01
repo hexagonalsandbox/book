@@ -22,8 +22,8 @@ TeleCommunication: # goal
 ```yml
 -
   GOAL: TeleCommunication  # object, or verb + object
-  ACTION: Exchange      # verb
-  OBJECT: Message            # object
+  ACTION: Exchange         # verb
+  OBJECT: Message          # object
   IN: Sender               # object interface from
   OUT: Recipient           # object interface to
 ```
@@ -32,7 +32,7 @@ TeleCommunication: # goal
 
 
 ```yml
-TeleCommunication # goal
+TeleCommunication:      # goal
   THROUGH: Exchange     # verb/object
   THE: Message          # object
   FROM:
@@ -49,7 +49,7 @@ TeleCommunication # goal
 
 
 ```yml
-TeleCommunication      # goal
+TeleCommunication:      # goal
   ACTION: Exchange     # verb/object
   OBJECT: Message      # object
   
@@ -57,9 +57,9 @@ Sender:                # goal
   ACTION: Create       # verb/object
   OBJECT: Message      # object
 
-Recipient:            # object interface
-  ACTION: Receive     # verb/object
-  OBJECT: Message     # object
+Recipient:             # object interface
+  ACTION: Receive      # verb/object
+  OBJECT: Message      # object
 ```
 
 
