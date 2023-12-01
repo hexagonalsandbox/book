@@ -13,7 +13,7 @@ i wymaga opisu na innym poziomie, poprzez jezyki programowania.
 
 
 
-## Telekomunikacja
+## Object: Network Provider
 
 #### 1. Sentence
 
@@ -36,55 +36,7 @@ TeleCommunication:   # object, or verb + object
 ```
 
 
-#### 3. Complex Sentence
-
-
-```yml
-TeleCommunication:       # goal
-  THROUGH: Exchange      # verb/object
-  THE: Message           # object
-  FROM:
-      Sender:            # object interface
-        THROUGH: Send    # verb/object
-        THE: Message     # object
-  TO:             
-      Recipient:         # object interface
-        THROUGH: Receive # verb/object
-        THE: Message     # object
-```
-
-
-#### 4. Catalog of Components
-
-
-```yml
-TeleCommunication:     # goal
-  ACTION: Exchange     # verb/object
-  OBJECT: Message      # object
-  
-Sender:                # goal
-  ACTION: Create       # verb/object
-  OBJECT: Message      # object
-
-Recipient:             # object interface
-  ACTION: Receive      # verb/object
-  OBJECT: Message      # object
-```
-
-
-#### 5. Network of Components
-
-```yml
-TeleCommunication:
-  FROM: Sender
-  TO: Receive
-```
-
-
-
-
-## Roles and behaviors
-
+## Object: Message
 
 
 #### 1. Complex Sentence
@@ -105,7 +57,92 @@ TeleCommunication:       # goal
 ```
 
 
-#### 2. Catalog of behaviors
+#### 2. Catalog of Components
+
+
+```yml
+TeleCommunication:     # goal
+  ACTION: Exchange     # verb/object
+  OBJECT: Message      # object
+  
+Sender:                # goal
+  ACTION: Create       # verb/object
+  OBJECT: Message      # object
+
+Recipient:             # object interface
+  ACTION: Receive      # verb/object
+  OBJECT: Message      # object
+```
+
+
+#### 3. Network of Components
+
+```yml
+TeleCommunication:
+  FROM: Sender
+  TO: Receive
+```
+
+
+#### 4. Relations
+
+```yml
+Exchange Message:  
+  Send Message
+  Receive Message
+```
+
+
+#### 5. Layers
+
+```yml
+Network:
+  Message    
+```
+
+
+
+## Object: Content
+
+
+#### 1. Complex Sentence
+
+
+```yml
+TeleCommunication:       # goal
+  THROUGH: Exchange      # verb/object
+  THE: Message           # object
+  FROM:
+      Sender:            # object interface
+        THROUGH: Send    # verb/object
+        THE: Message     # object
+        FROM:
+          Sender:            # object interface
+            THROUGH: Create    # verb/object
+            THE: Content     # object
+  TO:             
+      Recipient:         # object interface
+        THROUGH: Receive # verb/object
+        THE: Message     # object
+        FROM:
+          Reader:            # object interface
+            THROUGH: Read    # verb/object
+            THE: Content     # object
+```
+
+
+#### 2. Object layers
+
+```yml
+Network:
+  Message:
+    Content
+```
+
+
+### Behaviors
+
+#### 1. Catalog
 
 
 ```yml
@@ -131,21 +168,12 @@ Create Content:         # object interface
 
 Read Content:         # object interface
   ROLE: Reader
-  ACTION: Create       # verb/object
+  ACTION: Read       # verb/object
   OBJECT: Content      # object
 ```
 
 
-#### 3. Network of Objects
-
-```yml
-Network:
-  Message:
-    Content
-```
-
-
-#### 4. Network of behaviors
+#### 2. Relations
 
 ```yml
 Exchange Message:  
@@ -155,7 +183,11 @@ Exchange Message:
     Read Content
 ```
 
-#### 5. Network of roles
+
+
+### Roles
+
+#### 1. Relations
 
 ```yml
 TeleCommunication:
@@ -167,7 +199,7 @@ TeleCommunication:
 ```
 
 
-#### 6. Group ROLES
+#### 2. Groups
 
 ```yml
 Communicants:
@@ -180,7 +212,7 @@ Correspondent:
 ```
 
 
-#### 7. Structure of Roles
+#### 3. Layers
 
 
 ```yml
@@ -188,6 +220,8 @@ Provider:
   - Communicants
     - Correspondent
 ```
+
+
 
 
 
