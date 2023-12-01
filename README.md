@@ -11,21 +11,21 @@ idea
 
 ```yml
 -
-  DO: TeleCommunication
-  THROUGH: Exchange
-  THE: Message
-  FROM: Sender
-  TO: Recipient
+  DO: TeleCommunication # goal
+  THROUGH: Exchange     # verb/object
+  THE: Message          # object
+  FROM: Sender          # object interface
+  TO: Recipient         # object interface
 ```
 
 
 ```yml
 -
-  GOAL: TeleCommunication
-  OPERATION: Exchange
-  DATA: Message  
-  IN: Sender
-  OUT: Recipient
+  GOAL: TeleCommunication  # object, or verb + object
+  OPERATION: Exchange      # verb
+  DATA: Message            # object
+  IN: Sender               # object interface from
+  OUT: Recipient           # object interface to
 ```
 
 
