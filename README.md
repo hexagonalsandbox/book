@@ -5,24 +5,80 @@ hexagonal sandbox, how modular architecture works in real life with examples
 
 ### Telekomunikacja
 
+idea
+
+
 
 ```yml
-Telekomunikacja:
-  IN: Nadawca
-  OUT: Odbiorca
-  OPERATION:
-  DATA:
+-
+  DO: TeleCommunication
+    THROUGH: Exchange
+    THE: Message
+    FROM: Sender
+    TO: Recipient
+```
+
+
+```yml
+-
+  Goal: TeleCommunication:
+  OPERATION: Exchange
+  DATA: Message  
+  FROM: Sender
+  TO: Recipient
 ```
 
 
 polega na wymianie komunikatów pomiędzy nadawacą i odbiorcą
 
 
+Implementacja
+
+```yml
+-
+  Goal: TeleCommunication:
+  OPERATION: Exchange
+  DATA: Message
+  INTERFACES:
+    IN:
+        OPERATION: Send
+        DATA: Message
+    OUT: 
+        OPERATION: Receive
+        DATA: Message
+```
+
+
+```yml
+-
+  Goal: Sending Message
+  OPERATION: Send
+  DATA: Message
+  INTERFACES:
+    IN:
+    OUT:
+        OPERATION: Receive
+        DATA: Message
+```
+
+
+
 
 
 ### tematy
 
-+ "Use camera for facial recognition to unlock screen."
+#### "Use camera for facial recognition to unlock screen."
+
+```yml
+-
+  DO: take a photo
+    THROUGH: capture
+    THE: image
+    FROM: Camera
+    TO: Screen
+```
+
+
 + "Use camera to take a photo and send it to the recipient"
 + "From the contact list select the recipient and share"
 
