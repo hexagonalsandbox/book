@@ -32,24 +32,24 @@ TeleCommunication: # goal
 
 
 ```yml
-TeleCommunication:      # goal
-  THROUGH: Exchange     # verb/object
-  THE: Message          # object
+TeleCommunication:       # goal
+  THROUGH: Exchange      # verb/object
+  THE: Message           # object
   FROM:
-      Sender:           # object interface
-        ACTION: Create  # verb/object
-        THE: Message    # object
+      Sender:            # object interface
+        THROUGH: Create  # verb/object
+        THE: Message     # object
   TO:             
-      Recipient:        # object interface
-        ACTION: Receive # verb/object
-        THE: Message    # object
+      Recipient:         # object interface
+        THROUGH: Receive # verb/object
+        THE: Message     # object
 ```
 
 #### 3. catalog
 
 
 ```yml
-TeleCommunication:      # goal
+TeleCommunication:     # goal
   ACTION: Exchange     # verb/object
   OBJECT: Message      # object
   
