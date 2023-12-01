@@ -124,7 +124,7 @@ TeleCommunication:       # goal
       Recipient:         # object interface
         THROUGH: Receive # verb/object
         THE: Message     # object
-        FROM:
+        TO:
           Reader:            # object interface
             THROUGH: Read    # verb/object
             THE: Content     # object
