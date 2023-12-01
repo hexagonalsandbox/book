@@ -124,19 +124,39 @@ Receive Message:       # object interface
   ACTION: Receive      # verb/object
   OBJECT: Message      # object
 
-Ceate Message:         # object interface
+Create Content:         # object interface
   ROLE: Creator
   ACTION: Create       # verb/object
-  OBJECT: Message      # object
+  OBJECT: Content      # object
 
-Read Message:         # object interface
+Read Content:         # object interface
   ROLE: Reader
   ACTION: Create       # verb/object
-  OBJECT: Message      # object
+  OBJECT: Content      # object
 ```
 
 
-#### 3. Network of Roles
+#### 3. Network of Objects
+
+```yml
+Provider:
+  Message:
+    Content
+```
+
+
+#### 4. Network of behaviors
+
+```yml
+Exchange Message:  
+  Send Message:
+    Create Content
+  Receive Message:
+    Read Content
+```
+
+
+#### 5. Network of Roles
 
 ```yml
 TeleCommunication:
@@ -145,18 +165,6 @@ TeleCommunication:
       Creator
     Receiver:
       Reader
-```
-
-
-
-#### 4. Network of behaviors
-
-```yml
-Exchange Message:  
-  Send Message:
-    Create Message
-  Receive Message:
-    Read Message
 ```
 
 
@@ -196,7 +204,6 @@ Correspondent:
       - delete
       - update
     
-
 Communicants:
     OBJECT: Message
     ACTION:
