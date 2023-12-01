@@ -139,7 +139,7 @@ Read Content:         # object interface
 #### 3. Network of Objects
 
 ```yml
-Provider:
+Network:
   Message:
     Content
 ```
@@ -155,8 +155,7 @@ Exchange Message:
     Read Content
 ```
 
-
-#### 5. Network of Roles
+#### 5. Network of roles
 
 ```yml
 TeleCommunication:
@@ -168,7 +167,7 @@ TeleCommunication:
 ```
 
 
-## ROLES
+#### 6. Group ROLES
 
 ```yml
 Communicants:
@@ -178,8 +177,20 @@ Communicants:
 Correspondent:
   - Creator
   - Reader
-
 ```
+
+
+#### 7. Structure of Roles
+
+
+```yml
+Provider:
+  - Communicants
+    - Correspondent
+```
+
+
+
 
 ## OBJECTS
 
