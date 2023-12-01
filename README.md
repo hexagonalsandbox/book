@@ -8,13 +8,10 @@ hexagonal sandbox, how modular architecture works in real life with examples
 
 ### Telekomunikacja
 
-idea
-
-
+#### 1. idea
 
 ```yml
--
-  DO: TeleCommunication # goal
+TeleCommunication: # goal
   THROUGH: Exchange     # verb/object
   THE: Message          # object
   FROM: Sender          # object interface
@@ -25,17 +22,56 @@ idea
 ```yml
 -
   GOAL: TeleCommunication  # object, or verb + object
-  OPERATION: Exchange      # verb
-  DATA: Message            # object
+  ACTION: Exchange      # verb
+  OBJECT: Message            # object
   IN: Sender               # object interface from
   OUT: Recipient           # object interface to
 ```
+
+#### 2.extend
+
+
+```yml
+TeleCommunication # goal
+  THROUGH: Exchange     # verb/object
+  THE: Message          # object
+  FROM:
+      Sender:           # object interface
+        ACTION: Create  # verb/object
+        THE: Message    # object
+  TO:             
+      Recipient:        # object interface
+        ACTION: Receive # verb/object
+        THE: Message    # object
+```
+
+#### 3. catalog
+
+
+```yml
+TeleCommunication      # goal
+  ACTION: Exchange     # verb/object
+  OBJECT: Message      # object
+  
+Sender:                # goal
+  ACTION: Create       # verb/object
+  OBJECT: Message      # object
+
+Recipient:            # object interface
+  ACTION: Receive     # verb/object
+  OBJECT: Message     # object
+```
+
 
 
 polega na wymianie komunikatów pomiędzy nadawacą i odbiorcą
 
 
 Implementacja
+
+
+
+
 
 ```yml
 -
