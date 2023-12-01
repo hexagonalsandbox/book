@@ -8,27 +8,28 @@ hexagonal sandbox, how modular architecture works in real life with examples
 
 ### Telekomunikacja
 
-#### 1. idea
+#### 1. Sentence
 
 ```yml
-TeleCommunication: # goal
+TeleCommunication:      # goal
   THROUGH: Exchange     # verb/object
   THE: Message          # object
   FROM: Sender          # object interface
   TO: Recipient         # object interface
 ```
 
+#### 2. Component
 
 ```yml
--
-  GOAL: TeleCommunication  # object, or verb + object
-  ACTION: Exchange         # verb
-  OBJECT: Message          # object
-  IN: Sender               # object interface from
-  OUT: Recipient           # object interface to
+TeleCommunication:   # object, or verb + object
+  ACTION: Exchange   # verb
+  OBJECT: Message    # object
+  IN: Sender         # object interface from
+  OUT: Recipient     # object interface to
 ```
 
-#### 2.extend
+
+#### 3. More Components
 
 
 ```yml
@@ -45,7 +46,7 @@ TeleCommunication:       # goal
         THE: Message     # object
 ```
 
-#### 3. catalog
+#### 4. Catalog of Components
 
 
 ```yml
