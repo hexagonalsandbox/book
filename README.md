@@ -24,8 +24,8 @@ idea
   GOAL: TeleCommunication
   OPERATION: Exchange
   DATA: Message  
-  FROM: Sender
-  TO: Recipient
+  IN: Sender
+  OUT: Recipient
 ```
 
 
