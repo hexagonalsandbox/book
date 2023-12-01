@@ -146,14 +146,14 @@ Network:
 
 
 ```yml
-Exchange Message:     # goal
+Exchange Message:      # goal
   ROLE: Provider
   ACTION: Exchange     # verb/object
   OBJECT: Message      # object
   
 Send Message:          # goal
   ROLE: Sender
-  ACTION: Send       # verb/object
+  ACTION: Send         # verb/object
   OBJECT: Message      # object
 
 Receive Message:       # object interface
@@ -161,14 +161,14 @@ Receive Message:       # object interface
   ACTION: Receive      # verb/object
   OBJECT: Message      # object
 
-Create Content:         # object interface
+Create Content:        # object interface
   ROLE: Creator
   ACTION: Create       # verb/object
   OBJECT: Content      # object
 
-Read Content:         # object interface
+Read Content:          # object interface
   ROLE: Reader
-  ACTION: Read       # verb/object
+  ACTION: Read         # verb/object
   OBJECT: Content      # object
 ```
 
