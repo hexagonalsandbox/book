@@ -4,9 +4,7 @@ hexagonal sandbox, how modular architecture works in real life with examples
 + [INTRO](INTRO.md)
 
 
-## Spis treści
-
-### Telekomunikacja
+## Telekomunikacja
 
 #### 1. Sentence
 
@@ -38,13 +36,14 @@ TeleCommunication:       # goal
   THE: Message           # object
   FROM:
       Sender:            # object interface
-        THROUGH: Create  # verb/object
+        THROUGH: Send    # verb/object
         THE: Message     # object
   TO:             
       Recipient:         # object interface
         THROUGH: Receive # verb/object
         THE: Message     # object
 ```
+
 
 #### 4. Catalog of Components
 
@@ -63,6 +62,98 @@ Recipient:             # object interface
   OBJECT: Message      # object
 ```
 
+
+#### 5. Network of Components
+
+```yml
+TeleCommunication:
+  FROM: Sender
+  TO: Receive
+```
+
+
+
+
+## MESSAGE
+
+
+
+#### 1. Complex Sentence
+
+
+```yml
+TeleCommunication:       # goal
+  THROUGH: Exchange      # verb/object
+  THE: Message           # object
+  FROM:
+      Sender:            # object interface
+        THROUGH: Send    # verb/object
+        THE: Message     # object
+  TO:             
+      Recipient:         # object interface
+        THROUGH: Receive # verb/object
+        THE: Message     # object
+```
+
+
+#### 2. Catalog of Components
+
+
+```yml
+Exchange Message:     # goal
+  ROLE: Provider
+  ACTION: Exchange     # verb/object
+  OBJECT: Message      # object
+  
+Send Message:          # goal
+  ROLE: Sender
+  ACTION: Send       # verb/object
+  OBJECT: Message      # object
+
+Receive Message:       # object interface
+  ROLE: Recipient
+  ACTION: Receive      # verb/object
+  OBJECT: Message      # object
+
+Ceate Message:         # object interface
+  ROLE: Creator
+  ACTION: Create       # verb/object
+  OBJECT: Message      # object
+
+Read Message:         # object interface
+  ROLE: Reader
+  ACTION: Create       # verb/object
+  OBJECT: Message      # object
+```
+
+
+#### 5. Network of Components
+
+Roles:
+```yml
+TeleCommunication:
+  Provider:
+    Sender:
+      Creator
+    Receiver:
+      Reader
+```
+
+Actions:
+```yml
+Exchange Message:  
+  Send Message:
+    Ceate Message
+  Receive Message:
+    Read Message
+```
+
+
+```yml
+TeleCommunication:
+  FROM: Sender
+  TO: Receive
+```
 
 
 
