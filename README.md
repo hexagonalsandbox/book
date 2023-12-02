@@ -5,7 +5,8 @@ hexagonal sandbox, how modular architecture works in real life with examples
 + [1](1.md)
 + [2](2.md)
 
-## Object: Network Provider
+
+## 1. Connection
 
 #### 1. Sentence
 
@@ -27,8 +28,15 @@ TeleCommunication:   # object, or verb + object
   OUT: Recipient     # object interface to
 ```
 
+#### 3. Behaviors
 
-## Object: Message
+
+
+
+
+
+
+## 2. Message
 
 
 #### 1. Complex Sentence
@@ -94,7 +102,8 @@ Network:
 
 
 
-## Object: Content
+
+## 3. Content
 
 
 #### 1. Complex Sentence
@@ -221,12 +230,11 @@ Provider:
 ## OBJECTS
 
 ```yml
-Message:  
+Connection:  
     ACTION:
-      - create
-      - read
-      - delete
-      - update
+      - connect
+      - disconnect      
+
 
 Provider:  
     ACTION:
