@@ -2,7 +2,7 @@
 hexagonal sandbox, how modular architecture works in real life with examples
 
 + [INTRO](INTRO.md)
-
++ [1](1.md)
 
 istotne w problematyce tworzenia architektury, jest znalazienie odpowiednich znaczeń i relacji 
 w celu uporządkowania zależności i odgraniczenia ich w gotowych do re-użycia kompnentach.
