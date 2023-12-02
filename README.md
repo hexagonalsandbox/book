@@ -3,15 +3,7 @@ hexagonal sandbox, how modular architecture works in real life with examples
 
 + [INTRO](INTRO.md)
 + [1](1.md)
-
-istotne w problematyce tworzenia architektury, jest znalazienie odpowiednich znaczeń i relacji 
-w celu uporządkowania zależności i odgraniczenia ich w gotowych do re-użycia kompnentach.
-
-Na tej zasadzie tworzymy połączenia czasownika i rzeczownika jako sieć kompnentów wymieniających między sobą informacje w sposób ustrukturyzowany bez potrzeby głebokiej analizy niezalęnzie od użycia,
-gdzyż wzorce działają w każdej implementacji, gdyż są tworem abstrakcyjnym złozonym z konceptów chartakterystycznaych dla słownictwa, rozumienia logicznej przyczyny i skutku a sama implentacja jest techniczna 
-i wymaga opisu na innym poziomie, poprzez jezyki programowania.
-
-
++ [2](2.md)
 
 ## Object: Network Provider
 
